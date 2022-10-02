@@ -17,4 +17,15 @@ float valor, valortotal, valorsobre,valorrefre,totalGeral;
     char descricao, descrerefri,descrsobre;
     float valor, valortotal,valorsobre, valorrefri,total;
  };
- 
+ void MenuPrincipal (){
+   printf("|===========================================|\n");
+   printf("|             STARBUCKS CAFETERIA           |\n");
+   printf("|===========================================|\n");
+   printf("|    1-Fazer pedido   |  2-Imprimir Cupom   |\n");
+   printf("|===========================================|\n");
+   printf("|    3-Alterar Pedido |  4-Consultar        |\n");
+   printf("|===========================================|\n");
+   printf("Selecione a opção desejada ou 5 para sair \n");
+   scanf("%d",&op2);
+   system("cls");
+ }
