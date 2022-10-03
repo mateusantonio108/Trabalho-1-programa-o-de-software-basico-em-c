@@ -29,3 +29,44 @@ float valor, valortotal, valorsobre,valorrefre,totalGeral;
    scanf("%d",&op2);
    system("cls");
  }
+void bebidas(){
+	
+	printf(" ==================================\n");
+	printf("|   ESCOLHA SUA BEBIDA DESEJADO    |\n");
+	printf("|----------------------------------|\n");
+	printf("|codigo   | Descri��o    | Valor   |\n");
+	printf("|----------------------------------|\n");
+	printf("|   1     |     Suco     | 6.00    |\n");
+	printf("|----------------------------------|\n");
+	printf("|   2     | Refrigerante | 5.50    |\n");
+	printf("|----------------------------------|\n");
+	printf("|   3     |     Agua     | 3.00    |\n");
+	printf(" ==================================\n");
+	printf("informe o codigo dp produto \n");
+	scanf("%d",&codprod);
+	switch(codprod){
+		case 1:{
+			descricao="Suco";
+			valor = 6.00;
+			printf("informe a quantidade \n");
+			scanf("%d",&qtd);
+			break;
+		}
+		case 2:{
+			descricao="Refrigerante";
+			valor=5.50;
+			printf("informe a quantidade \n");
+			scanf("%d",&qtd);
+			break;
+		}
+		case 3:{
+			descricao="Agua";
+			valor=3.00;
+			printf("informe a quantidade \n");
+			scanf("%d",&qtd);
+			break;
+		}
+		
+	}
+}
+
