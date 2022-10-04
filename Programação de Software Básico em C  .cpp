@@ -34,7 +34,7 @@ void bebidas(){
 	printf(" ==================================\n");
 	printf("|   ESCOLHA SUA BEBIDA DESEJADO    |\n");
 	printf("|----------------------------------|\n");
-	printf("|codigo   | Descri��o    | Valor   |\n");
+	printf("|codigo   | Descricao    | Valor   |\n");
 	printf("|----------------------------------|\n");
 	printf("|   1     |     Suco     | 6.00    |\n");
 	printf("|----------------------------------|\n");
@@ -137,24 +137,24 @@ void cardapio(){
       
 }
 void visualizarCupom(){
-	printf("|=================================|\n");
+	printf("===================================\n");
 	printf("|      CONFIRA SEU CUPOM          |\n");
-	printf("==================================\n");
+	printf("===================================\n");
 	printf("|Descricao sanduiche  : %s\n",descricao);
 	printf("|Quant sanduiche      : %d\n",qtd);
 	printf("|Valor Unit sanduiche : %f\n",valor);
 	printf("|Descricao refr.      : %s\n",descrrefre);
 	printf("|Quant refri          : %d\n",qtdref);
 	printf("|Valor Unit refri     : %f\n",valorrefre);
-	printf("|=================================|\n");
+	printf("===================================\n");
 	printf("|             TOTAIS              |\n");
 	printf("==================================\n");
 	printf("|Total item sanduiche : R$ %f \n", qtd*valor);
 	printf("|Total item refri     : R$ %f \n", qtdref*valorrefre);
 	printf("|Total a pagar        : R$ %f \n", ((qtd*valor)+(qtdref*valorrefre)));
-	printf("|=================================|\n");
-	printf("|   OBRIGADO PELA PREFERÃŠNCIA     |\n");
-	printf("==================================\n");
+	printf("===================================\n");
+	printf("|   OBRIGADO PELA PREFERENCIA     |\n");
+	printf("===================================\n");
 }
 
 main(){
