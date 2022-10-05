@@ -137,6 +137,10 @@ void cardapio(){
       
 }
 void visualizarCupom(){
+	 time_t now = time(NULL);
+      printf("%ld\n", now);
+      char *string_now = ctime(&now);
+      printf(" NOTA FISCAL EMITIDA EM: %s\n", string_now);
 	printf("===================================\n");
 	printf("|      CONFIRA SEU CUPOM          |\n");
 	printf("===================================\n");
