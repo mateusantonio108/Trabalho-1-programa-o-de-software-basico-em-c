@@ -29,6 +29,14 @@ float valor, valortotal, valorsobre,valorrefre,totalGeral;
    scanf("%d",&op2);
    system("cls");
  }
+void AlterarPedido(){
+     printf("|=========================================|\n");
+     printf("|      Qual pedido você quer alterar      |\n");
+     printf("|=========================================|\n");
+     printf("|       1-Lache    |     2-Bebidas        |\n");
+     printf("|=========================================|\n");
+     scanf(%d,)
+ }
 void bebidas(){
 	
 	printf(" ==================================\n");
@@ -175,7 +183,7 @@ main(){
 			break;
 		}
 		case 3:{
-			//AlterarPedido();
+			AlterarPedido();
 			system("cls");
 			break;
 		}
