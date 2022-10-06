@@ -132,7 +132,7 @@ void cardapio(){
 		}		
 		
 	}
-	printf("Deseja pedir algum refrigerante ou outro item ? 1-Sim ou Zero para nÃ£o\n");
+	printf("Deseja pedir algum refrigerante ou outro item ? 1-Sim ou 2-Nao\n");
 	scanf("%d",&op);
 	system("cls");
 	if (op==1){
