@@ -35,7 +35,6 @@ void AlterarPedido(){
      printf("|=========================================|\n");
      printf("|       1-Lache    |     2-Bebidas        |\n");
      printf("|=========================================|\n");
-     scanf(%d,)
  }
 void bebidas(){
 	
@@ -54,24 +53,24 @@ void bebidas(){
 	scanf("%d",&codprod);
 	switch(codprod){
 		case 1:{
-			descricao="Suco";
-			valor = 6.00;
+			descrrefre="Suco";
+			valorrefre = 6.00;
 			printf("informe a quantidade \n");
-			scanf("%d",&qtd);
+			scanf("%d",&qtdref);
 			break;
 		}
 		case 2:{
-			descricao="Refrigerante";
-			valor=5.50;
+			descrrefre="Refrigerante";
+			valorrefre=5.50;
 			printf("informe a quantidade \n");
-			scanf("%d",&qtd);
+			scanf("%d",&qtdref);
 			break;
 		}
 		case 3:{
-			descricao="Agua";
-			valor=3.00;
+			descrrefre="Agua";
+			valorrefre=3.00;
 			printf("informe a quantidade \n");
-			scanf("%d",&qtd);
+			scanf("%d",&qtdref);
 			break;
 		}
 		
@@ -118,14 +117,14 @@ void cardapio(){
 			break;
 		}
 		case 4:{
-			  descrrefre="Cupcake";
+			  descricao="Cupcake";
 			 valorrefre = 5.00;
 			 printf("informe a quantidade \n");
 			 scanf("%d",&qtdref);
 			break;
 		}
 		case 5:{
-			 descrrefre="Cookie";
+			 descricao="Cookie";
 			 valorrefre = 3.00;
 			 printf("informe a quantidade \n");
 			 scanf("%d",&qtdref);
@@ -193,4 +192,3 @@ main(){
 		}
 	}	
 }
-
