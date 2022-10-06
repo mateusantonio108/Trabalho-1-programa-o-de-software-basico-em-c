@@ -9,7 +9,7 @@
 #include<conio.h>
 #include<time.h>
 
-int codprod, op, op2, qtd, qtdref, qtdsobre;
+int codprod, op, op2,op3, qtd, qtdref, qtdsobre;
 char *descricao, *descrrefre, *descrsobre;
 float valor, valortotal, valorsobre,valorrefre,totalGeral;
  struct produto
@@ -35,7 +35,11 @@ void AlterarPedido(){
      printf("|=========================================|\n");
      printf("|       1-Lache    |     2-Bebidas        |\n");
      printf("|=========================================|\n");
- }
+     system("cls");
+     printf("informe o produto que deseja alterar \n");
+     scanf("%d",&codprod);
+	system("cls");
+}
 void bebidas(){
 	
 	printf(" ==================================\n");
@@ -75,7 +79,20 @@ void bebidas(){
 		}
 		
 	}
+
+    	printf("Deseja pedir alguma coisa a mais? 1-Sim ou 2-Nao\n");
+	scanf("%d",&op);
+	system("cls");
+	if (op==1){
+		MenuPrincipal();
+	}else{
+	   visualizarCupom();
+	    	
+	}
+    
 }
+
+
 void cardapio(){
 	printf(" ==================================\n");
 	printf("|  ESCOLHA O LANCHE DESEJADO       |\n");
@@ -138,7 +155,7 @@ void cardapio(){
 	if (op==1){
 		bebidas();
 	}else{
-	   cardapio();
+	   MenuPrincipal();
 	    	
 	}
       
@@ -190,5 +207,18 @@ main(){
 			//Consultar();
 			break;
 		}
-	}	
+	}
+	AlterarPedido();
+	switch(codprod){
+	case 1:{
+	    cardapio();
+	    
+	    break;
+	}
+	case 2:{
+	    bebidas();
+	    
+	    break;
+	}
+	}
 }
