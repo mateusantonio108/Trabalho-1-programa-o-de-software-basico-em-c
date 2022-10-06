@@ -9,7 +9,7 @@
 #include<conio.h>
 #include<time.h>
 
-int codprod, op, op2, qtd, qtdref, qtdsobre;
+int codprod, op, op2,op3, qtd, qtdref, qtdsobre;
 char *descricao, *descrrefre, *descrsobre;
 float valor, valortotal, valorsobre,valorrefre,totalGeral;
  struct produto
@@ -35,8 +35,11 @@ void AlterarPedido(){
      printf("|=========================================|\n");
      printf("|       1-Lache    |     2-Bebidas        |\n");
      printf("|=========================================|\n");
-     scanf(%d,)
- }
+     system("cls");
+     printf("informe o produto que deseja alterar \n");
+     scanf("%d",&codprod);
+	system("cls");
+}
 void bebidas(){
 	
 	printf(" ==================================\n");
@@ -54,29 +57,42 @@ void bebidas(){
 	scanf("%d",&codprod);
 	switch(codprod){
 		case 1:{
-			descricao="Suco";
-			valor = 6.00;
+			descrrefre="Suco";
+			valorrefre = 6.00;
 			printf("informe a quantidade \n");
-			scanf("%d",&qtd);
+			scanf("%d",&qtdref);
 			break;
 		}
 		case 2:{
-			descricao="Refrigerante";
-			valor=5.50;
+			descrrefre="Refrigerante";
+			valorrefre=5.50;
 			printf("informe a quantidade \n");
-			scanf("%d",&qtd);
+			scanf("%d",&qtdref);
 			break;
 		}
 		case 3:{
-			descricao="Agua";
-			valor=3.00;
+			descrrefre="Agua";
+			valorrefre=3.00;
 			printf("informe a quantidade \n");
-			scanf("%d",&qtd);
+			scanf("%d",&qtdref);
 			break;
 		}
 		
 	}
+
+    	printf("Deseja pedir alguma coisa a mais? 1-Sim ou 2-Nao\n");
+	scanf("%d",&op);
+	system("cls");
+	if (op==1){
+		MenuPrincipal();
+	}else{
+	   visualizarCupom();
+	    	
+	}
+    
 }
+
+
 void cardapio(){
 	printf(" ==================================\n");
 	printf("|  ESCOLHA O LANCHE DESEJADO       |\n");
@@ -118,14 +134,14 @@ void cardapio(){
 			break;
 		}
 		case 4:{
-			  descrrefre="Cupcake";
+			  descricao="Cupcake";
 			 valorrefre = 5.00;
 			 printf("informe a quantidade \n");
 			 scanf("%d",&qtdref);
 			break;
 		}
 		case 5:{
-			 descrrefre="Cookie";
+			 descricao="Cookie";
 			 valorrefre = 3.00;
 			 printf("informe a quantidade \n");
 			 scanf("%d",&qtdref);
@@ -133,20 +149,20 @@ void cardapio(){
 		}		
 		
 	}
-	printf("Deseja pedir algum refrigerante ou outro item ? 1-Sim ou Zero para nÃ£o\n");
+	printf("Deseja pedir algum refrigerante ou outro item ? 1-Sim ou 2-Nao\n");
 	scanf("%d",&op);
 	system("cls");
 	if (op==1){
 		bebidas();
 	}else{
-	   cardapio();
+	   MenuPrincipal();
 	    	
 	}
       
 }
 void visualizarCupom(){
 	 time_t now = time(NULL);
-      printf("%ld\n", now);
+      
       char *string_now = ctime(&now);
       printf(" NOTA FISCAL EMITIDA EM: %s\n", string_now);
 	printf("===================================\n");
@@ -191,6 +207,18 @@ main(){
 			//Consultar();
 			break;
 		}
-	}	
+	}
+	AlterarPedido();
+	switch(codprod){
+	case 1:{
+	    cardapio();
+	    
+	    break;
+	}
+	case 2:{
+	    bebidas();
+	    
+	    break;
+	}
+	}
 }
-
